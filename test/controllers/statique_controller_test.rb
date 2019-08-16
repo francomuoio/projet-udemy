@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class StatiqueControllerTest < ActionDispatch::IntegrationTest
-  test "should get acceuil" do
-    get statique_acceuil_url
+  test "should get root" do
+    get root_url
     assert_response :success
   end
 
@@ -11,4 +11,13 @@ class StatiqueControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get team" do
+    get statique_team_url
+    assert_response :success
+  end
+
+  test "should get service" do
+    get statique_service_url
+    assert_response :success
+  end
 end
