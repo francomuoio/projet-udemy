@@ -1,0 +1,18 @@
+
+<h1>Compteur mal de tête</h1>
+<ul>
+<% @compteurs.each do |compteur| %>
+<li><%= link_to "Le #{compteur.created_at.strftime("%m/%d/%Y")}", edit_compteur_path(compteur) %> / <%= compteur.description %> / <%= compteur.raison %>  </li>
+<% end %>
+</ul>
+</div>
+
+<%= simple_form_for @compteur do |f|  %>
+  <%= f.input :description , :as => :hidden, :input_html => { :value => "" }%>
+  <div class="col-sm-12 text-center">
+    <br><br>
+     <%= f.submit "J'ai mal à la tête", class: "test", data: { confirm: "As tu vraiment mal à la tête" } %>
+    <br><br>
+  </div>
+  <br><br>
+<% end %>

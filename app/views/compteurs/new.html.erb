@@ -1,0 +1,12 @@
+<h1>Compteurs#new</h1>
+<p>Find me in app/views/compteurs/new.html.erb</p>
+
+<%= simple_form_for @compteur do |f|  %>
+  <%= f.input :description , :as => :hidden, :input_html => { :value => "" }%>
+  <div class="col-sm-12 text-center">
+    <br><br>
+     <%= f.submit "Envoyer mes étiquettes", class: "test", data: { confirm: "Souhaitez vous envoyer vos étiquettes?" } %>
+    <br><br>
+  </div>
+  <br><br>
+<% end %>

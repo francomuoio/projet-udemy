@@ -1,0 +1,14 @@
+<h1>Compteurs#edit</h1>
+<p>Find me in app/views/compteurs/edit.html.erb</p>
+<%= simple_form_for @compteur do |f|  %>
+  <%= f.input :description, label: "contexte" %>
+  <%= f.input :raison, label: "Remède" %>
+  <div class="col-sm-12 text-center">
+    <br><br>
+     <%= f.submit "J'ai mal à la tête", class: "test", data: { confirm: "As tu vraiment mal à la tête" } %>
+    <br><br>
+  </div>
+  <br><br>
+<% end %>
+<br>
+<p><%= link_to "supprimer", compteur_path(@compteur), data: { confirm: "Are you sure?" }, method: :delete %></p>

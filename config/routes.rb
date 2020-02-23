@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :compteurs
   get 'statique/contact'
   get 'statique/service'
   get 'statique/team'
