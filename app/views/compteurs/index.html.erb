@@ -2,7 +2,7 @@
 <h1>Compteur mal de tête</h1>
 <ul>
 <% @compteurs.each do |compteur| %>
-<li><%= link_to "Le #{compteur.created_at.strftime("%m/%d/%Y")}", edit_compteur_path(compteur) %> / <%= compteur.description %> / <%= compteur.raison %>  </li>
+<li><%= link_to "Le #{compteur.created_at.strftime("%m/%d/%Y à %T")}", edit_compteur_path(compteur) %> / <%= compteur.description %> / <%= compteur.raison %>  </li>
 <% end %>
 </ul>
 </div>
