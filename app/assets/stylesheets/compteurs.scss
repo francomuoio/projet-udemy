@@ -1,3 +1,53 @@
 // Place all the styles related to the compteurs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  background-color: red;
+  border: red;
+  font-size: 70px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: green;
+}
+
+#compteur_raison {
+  text-align: center;
+  height: 80px!important;
+  width: 100%;
+  font-size: 30px;
+}
+
+#compteur_description {
+  text-align: center;
+  height: 80px!important;
+  width: 100%;
+  font-size: 30px;
+}
+
+.form {
+  margin: 50px 50px;
+  padding: 50px 50px;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  margin: 50px 50px;
+  padding: 50px 50px;
+  background-color: blue;
+  color: #f6F6F6;
+}
+

@@ -1,18 +1,34 @@
 
-<h1>Compteur mal de tête</h1>
-<ul>
+
+
+<div class="index">
+<h1 class="text-center">Compteur de bouboule</h1>
+<ul class="">
 <% @compteurs.each do |compteur| %>
-<li><%= link_to "Le #{compteur.created_at.strftime("%m/%d/%Y à %T")}", edit_compteur_path(compteur) %> / <%= compteur.description %> / <%= compteur.raison %>  </li>
+<li><%= link_to "Le #{compteur.created_at.strftime("%m/%d/%Y à %T")}", edit_compteur_path(compteur) %> <br> <p><strong style="text-decoration: underline;">contexte: </strong> <%= compteur.description %></p> <p><strong style="text-decoration: underline;">remède:</strong> <%= compteur.raison %> </p> </li>
 <% end %>
 </ul>
 </div>
 
+
+
+<div class="form">
 <%= simple_form_for @compteur do |f|  %>
-  <%= f.input :description , :as => :hidden, :input_html => { :value => "" }%>
+  <%= f.input :description, placeholder: "Contexte du mal de crâne (facultatif)", label: false %>
+  <br>
+  <%= f.input :raison, class: "input_form", placeholder: "Solution mise en place (facultatif)", label: false%>
   <div class="col-sm-12 text-center">
-    <br><br>
-     <%= f.submit "J'ai mal à la tête", class: "test", data: { confirm: "As tu vraiment mal à la tête" } %>
+    <br><br><br><br>
+     <%= f.submit "J'ai mal a m'tiete", class: "test", data: { confirm: "As tu vraiment mal à la tête" }, class: "button"%>
     <br><br>
   </div>
-  <br><br>
 <% end %>
+</div>
+
+<div class="card">
+<h3 class="text-center">Total</h3>
+<br>
+<div class="compte text-center ">
+  <h1><%= @compteurs.count %></h1>
+</div>
+</div>
