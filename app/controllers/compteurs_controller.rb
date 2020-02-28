@@ -18,6 +18,7 @@ class CompteursController < ApplicationController
     if @compteur.valid?
       @compteur.save
       redirect_to compteurs_path
+      flash[:success] = "Votre mal de crâne est sauvegardé"
     else
       render :new
     end
